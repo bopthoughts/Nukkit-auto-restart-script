@@ -1,7 +1,7 @@
 @echo off
 TITLE Nukkit : Auto restart
 cd /d %~dp0
-netstat -o -n -a | findstr 0.0.0.0:19133>nul
+netstat -o -n -a | findstr 0.0.0.0:19132>nul
 if %ERRORLEVEL% equ 0 (
     echo Your server is running.
     goto :loop
@@ -16,7 +16,7 @@ echo Checking if server is online...
 PING 127.0.0.1 -n 10 >NUL
 
 
-netstat -o -n -a | findstr 0.0:11222>nul
+netstat -o -n -a | findstr 0.0:19132>nul
 if %ERRORLEVEL% equ 0 (
     echo Server is running.
     goto :loop
